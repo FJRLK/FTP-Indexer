@@ -1,0 +1,14 @@
+a {text-decoration:none;}
+a:link {color:#0000ff;}
+a:visited {color:#0000ff;}
+a:active {color:#0000ff;}
+a:hover {color:#0000ff;}
+table {text-align: left;}
+body {font-family: times,verdana; font-size: 16px;}
+.logo {font-size: 32px;}
+.h1 {font-size: 21px;}
+.l1 {font-family: helvetica,arial,verdana; font-size: 13px;}
+.l2 {font-family: helvetica,arial,verdana; font-size: 11px;}
+.i {height: 16px; width: 16px; border: 0px;}
+.o {height: 12px; width: 12px; border: 0px;}
+.s {height: 6px; width: 12px; border: 0px;}
