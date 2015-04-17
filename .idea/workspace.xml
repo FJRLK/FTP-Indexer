@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97b4e29d-0801-4fc9-a3d4-089944b27ef7" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Projects\PHP projects\FTP-Indexer\menu_end.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin.php" afterPath="$PROJECT_DIR$/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment_del.php" afterPath="$PROJECT_DIR$/comment_del.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ftp_del.php" afterPath="$PROJECT_DIR$/ftp_del.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ftp_host.php" afterPath="$PROJECT_DIR$/ftp_host.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ftp_list.php" afterPath="$PROJECT_DIR$/ftp_list.php" />
+      <change type="DELETED" beforePath="C:\Projects\PHP projects\FTP-Indexer\top.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/select.php" afterPath="$PROJECT_DIR$/select.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smb_del.php" afterPath="$PROJECT_DIR$/smb_del.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smb_host.php" afterPath="$PROJECT_DIR$/smb_host.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smb_list.php" afterPath="$PROJECT_DIR$/smb_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vars.php" afterPath="$PROJECT_DIR$/vars.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FFSearch.iws" />
@@ -39,182 +29,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="select.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="select.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/select.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5" vertical-offset="7252" max-vertical-offset="9537">
-              <caret line="435" column="0" selection-start-line="435" selection-start-column="0" selection-end-line="435" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2559524" vertical-offset="5064" max-vertical-offset="9554">
+              <caret line="308" column="72" selection-start-line="308" selection-start-column="72" selection-end-line="308" selection-end-column="72" />
               <folding>
-                <marker date="1429269663582" expanded="true" signature="1702:1742" placeholder="SELECT Curre..." />
-                <marker date="1429269663582" expanded="true" signature="2079:2122" placeholder="UPDATE user ..." />
-                <marker date="1429269663582" expanded="true" signature="2282:2390" placeholder="SELECT Posit..." />
-                <marker date="1429269663582" expanded="true" signature="23566:23648" placeholder="SELECT LastC..status..." />
-                <marker date="1429269663582" expanded="true" signature="23989:24109" placeholder="SELECT COUNT..host..." />
-                <marker date="1429269663582" expanded="true" signature="24550:24670" placeholder="SELECT COUNT..host..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smb_del.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smb_del.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.153846" vertical-offset="1240" max-vertical-offset="1683">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding>
-                <marker date="1429269677610" expanded="true" signature="424:499" placeholder="SELECT HostN..smb..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smb_host.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smb_host.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.730769" vertical-offset="3046" max-vertical-offset="3502">
-              <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-              <folding>
-                <marker date="1429269693352" expanded="true" signature="1161:1292" placeholder="SELECT host...smb..." />
-                <marker date="1429269693352" expanded="true" signature="1631:1678" placeholder="SELECT Expir..host..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smb_list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smb_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.153846" vertical-offset="7998" max-vertical-offset="8670">
-              <caret line="486" column="14" selection-start-line="486" selection-start-column="4" selection-end-line="486" selection-end-column="14" />
-              <folding>
-                <marker date="1429269699867" expanded="true" signature="1880:1985" placeholder="SELECT host...smb..." />
-                <marker date="1429269699867" expanded="true" signature="2134:2291" placeholder="INSERT INTO ..." />
-                <marker date="1429269699867" expanded="true" signature="2329:2454" placeholder="INSERT INTO ..." />
-                <marker date="1429269699867" expanded="true" signature="2482:2615" placeholder="INSERT INTO ..." />
-                <marker date="1429269699867" expanded="true" signature="3014:3166" placeholder="UPDATE host ..." />
-                <marker date="1429269699867" expanded="true" signature="3220:3340" placeholder="UPDATE host ..." />
-                <marker date="1429269699867" expanded="true" signature="3383:3452" placeholder="UPDATE smb S..." />
-                <marker date="1429269699867" expanded="true" signature="4776:4842" placeholder="SELECT IP,Fl..smb..." />
-                <marker date="1429269699867" expanded="true" signature="6793:6830" placeholder="UPDATE smb S..." />
-                <marker date="1429269699867" expanded="true" signature="6864:6903" placeholder="UPDATE host ..." />
-                <marker date="1429269699867" expanded="true" signature="6937:6982" placeholder="UPDATE host ..." />
-                <marker date="1429269699867" expanded="true" signature="7259:7328" placeholder="SELECT HostN..smb..." />
-                <marker date="1429269699867" expanded="true" signature="7630:7730" placeholder="UPDATE host ..." />
-                <marker date="1429269699867" expanded="true" signature="8075:8144" placeholder="SELECT HostN..smb..." />
-                <marker date="1429269699867" expanded="true" signature="8466:8548" placeholder="UPDATE host ..." />
-                <marker date="1429269699867" expanded="true" signature="9020:9055" placeholder="SELECT HostN..smb..." />
-                <marker date="1429269699867" expanded="true" signature="9149:9230" placeholder="UPDATE host ..." />
-                <marker date="1429269699867" expanded="true" signature="9665:9765" placeholder="SELECT host...smb..." />
-                <marker date="1429269699867" expanded="true" signature="10250:10274" placeholder="SELECT COUNT..smb..." />
-                <marker date="1429269699867" expanded="true" signature="10335:10506" placeholder="SELECT host...smb..." />
-                <marker date="1429269699867" expanded="true" signature="10596:10676" placeholder="SELECT COUNT..smb..." />
-                <marker date="1429269699867" expanded="true" signature="10737:10900" placeholder="SELECT host...smb..." />
-                <marker date="1429269699867" expanded="true" signature="16655:16749" placeholder="SELECT SID,S..share..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vars.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vars.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.070073" vertical-offset="114" max-vertical-offset="3859">
-              <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-              <folding>
-                <marker date="1429270686785" expanded="true" signature="3412:3489" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.153846" vertical-offset="2778" max-vertical-offset="3247">
-              <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-              <folding>
-                <marker date="1429269532315" expanded="true" signature="341:425" placeholder="UPDATE admin..." />
-                <marker date="1429269532315" expanded="true" signature="847:886" placeholder="UPDATE admin..." />
-                <marker date="1429269532315" expanded="true" signature="1265:1341" placeholder="SELECT Name,..admin..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment_del.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comment_del.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.615385" vertical-offset="1125" max-vertical-offset="1581">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding>
-                <marker date="1429269539586" expanded="true" signature="285:340" placeholder="SELECT Time,..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ftp_del.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ftp_del.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.769231" vertical-offset="1248" max-vertical-offset="1734">
-              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-              <folding>
-                <marker date="1429094300992" expanded="true" signature="528:614" placeholder="SELECT HostN..ftp..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ftp_host.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ftp_host.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.961538" vertical-offset="3694" max-vertical-offset="4199">
-              <caret line="231" column="1" selection-start-line="231" selection-start-column="1" selection-end-line="231" selection-end-column="1" />
-              <folding>
-                <marker date="1429269663467" expanded="true" signature="2083:2255" placeholder="SELECT HostN..ftp..." />
-                <marker date="1429269663467" expanded="true" signature="2795:2842" placeholder="SELECT Expir..host..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ftp_list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ftp_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.423077" vertical-offset="7959" max-vertical-offset="8415">
-              <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
-              <folding>
-                <marker date="1429269663614" expanded="true" signature="3072:3273" placeholder="SELECT host...ftp..." />
-                <marker date="1429269663614" expanded="true" signature="3530:3687" placeholder="INSERT INTO ..." />
-                <marker date="1429269663614" expanded="true" signature="3716:4072" placeholder="INSERT INTO ..." />
-                <marker date="1429269663614" expanded="true" signature="4122:4247" placeholder="INSERT INTO ..." />
-                <marker date="1429269663614" expanded="true" signature="4276:4628" placeholder="INSERT INTO ..." />
-                <marker date="1429269663614" expanded="true" signature="5189:5341" placeholder="UPDATE host ..." />
-                <marker date="1429269663614" expanded="true" signature="5385:5677" placeholder="UPDATE ftp S..." />
-                <marker date="1429269663614" expanded="true" signature="5745:5865" placeholder="UPDATE host ..." />
-                <marker date="1429269663614" expanded="true" signature="5909:6197" placeholder="UPDATE ftp S..." />
-                <marker date="1429269663614" expanded="true" signature="8083:8169" placeholder="SELECT HostN..ftp..." />
-                <marker date="1429269663614" expanded="true" signature="9942:9979" placeholder="UPDATE ftp S..." />
-                <marker date="1429269663614" expanded="true" signature="10013:10052" placeholder="UPDATE host ..." />
-                <marker date="1429269663614" expanded="true" signature="10086:10131" placeholder="UPDATE host ..." />
-                <marker date="1429269663614" expanded="true" signature="10408:10488" placeholder="SELECT HostN..ftp..." />
-                <marker date="1429269663614" expanded="true" signature="10993:11093" placeholder="UPDATE host ..." />
-                <marker date="1429269663614" expanded="true" signature="11438:11518" placeholder="SELECT HostN..ftp..." />
-                <marker date="1429269663614" expanded="true" signature="12043:12101" placeholder="UPDATE host ..." />
-                <marker date="1429269663614" expanded="true" signature="12573:12608" placeholder="SELECT HostN..ftp..." />
-                <marker date="1429269663614" expanded="true" signature="12702:12759" placeholder="UPDATE host ..." />
-                <marker date="1429269663614" expanded="true" signature="13228:13328" placeholder="SELECT host...ftp..." />
-                <marker date="1429269663614" expanded="true" signature="13813:13837" placeholder="SELECT COUNT..ftp..." />
-                <marker date="1429269663614" expanded="true" signature="13898:14110" placeholder="SELECT host...ftp..." />
-                <marker date="1429269663614" expanded="true" signature="14200:14280" placeholder="SELECT COUNT..ftp..." />
-                <marker date="1429269663614" expanded="true" signature="14341:14545" placeholder="SELECT host...ftp..." />
-                <marker date="1429269663614" expanded="true" signature="15388:15402" placeholder="..." />
-                <marker date="1429269663614" expanded="true" signature="15436:15451" placeholder="..." />
-                <marker date="1429269663614" expanded="true" signature="15811:15821" placeholder="..." />
-                <marker date="1429269663614" expanded="true" signature="15902:15917" placeholder="..." />
-                <marker date="1429269663614" expanded="true" signature="16028:16042" placeholder="..." />
-                <marker date="1429269663614" expanded="true" signature="16333:16344" placeholder="..." />
-                <marker date="1429269663614" expanded="true" signature="16938:16948" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -245,11 +66,11 @@
         <option value="$PROJECT_DIR$/ftp_del.php" />
         <option value="$PROJECT_DIR$/ftp_host.php" />
         <option value="$PROJECT_DIR$/ftp_list.php" />
-        <option value="$PROJECT_DIR$/select.php" />
         <option value="$PROJECT_DIR$/smb_del.php" />
         <option value="$PROJECT_DIR$/smb_host.php" />
         <option value="$PROJECT_DIR$/smb_list.php" />
         <option value="$PROJECT_DIR$/vars.php" />
+        <option value="$PROJECT_DIR$/select.php" />
       </list>
     </option>
   </component>
@@ -337,9 +158,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -347,6 +165,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -392,9 +213,9 @@
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -415,42 +236,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/select.php</url>
-          <line>361</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/select.php</url>
-          <line>387</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="680">
-          <caret line="31" column="206" selection-start-line="31" selection-start-column="206" selection-end-line="31" selection-end-column="206" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/select.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="8721">
           <caret line="155" column="83" selection-start-line="155" selection-start-column="83" selection-end-line="155" selection-end-column="83" />
           <folding>
-            <marker date="1429269663582" expanded="true" signature="1702:1742" placeholder="SELECT Curre..." />
-            <marker date="1429269663582" expanded="true" signature="2079:2122" placeholder="UPDATE user ..." />
-            <marker date="1429269663582" expanded="true" signature="2282:2390" placeholder="SELECT Posit..." />
-            <marker date="1429269663582" expanded="true" signature="23566:23648" placeholder="SELECT LastC..status..." />
-            <marker date="1429269663582" expanded="true" signature="23989:24109" placeholder="SELECT COUNT..host..." />
-            <marker date="1429269663582" expanded="true" signature="24550:24670" placeholder="SELECT COUNT..host..." />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -466,13 +262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="383" max-vertical-offset="1564">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="47" selection-end-column="87" />
         </state>
       </provider>
     </entry>
@@ -496,20 +285,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="10285">
           <caret line="200" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
           <folding>
-            <marker date="1429269663582" expanded="true" signature="1702:1742" placeholder="SELECT Curre..." />
-            <marker date="1429269663582" expanded="true" signature="2079:2122" placeholder="UPDATE user ..." />
-            <marker date="1429269663582" expanded="true" signature="2282:2390" placeholder="SELECT Posit..." />
-            <marker date="1429269663582" expanded="true" signature="23566:23648" placeholder="SELECT LastC..status..." />
-            <marker date="1429269663582" expanded="true" signature="23989:24109" placeholder="SELECT COUNT..host..." />
-            <marker date="1429269663582" expanded="true" signature="24550:24670" placeholder="SELECT COUNT..host..." />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -533,20 +310,23 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10285">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1429269663582" expanded="true" signature="1702:1742" placeholder="SELECT Curre..." />
-            <marker date="1429269663582" expanded="true" signature="2079:2122" placeholder="UPDATE user ..." />
-            <marker date="1429269663582" expanded="true" signature="2282:2390" placeholder="SELECT Posit..." />
-            <marker date="1429269663582" expanded="true" signature="23566:23648" placeholder="SELECT LastC..status..." />
-            <marker date="1429269663582" expanded="true" signature="23989:24109" placeholder="SELECT COUNT..host..." />
-            <marker date="1429269663582" expanded="true" signature="24550:24670" placeholder="SELECT COUNT..host..." />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
+    <entry file="file://$PROJECT_DIR$/Content/Styles/top.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="1785">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="408">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -565,13 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Content/Styles/top.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
@@ -584,35 +357,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="408">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content/Styles/top.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="408">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -634,13 +378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7818697" vertical-offset="315" max-vertical-offset="1071">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -729,7 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,35 +473,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.538462" vertical-offset="1510" max-vertical-offset="2873">
           <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-          <folding>
-            <marker date="1428858591498" expanded="true" signature="-1:-1" placeholder="SELECT CID F..comments..." />
-            <marker date="1428858591498" expanded="true" signature="-1:-1" placeholder="UPDATE comme..." />
-            <marker date="1428858591498" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1428858591498" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1428858591498" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1428858591498" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.153846" vertical-offset="2778" max-vertical-offset="3247">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2778" max-vertical-offset="3247">
           <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
           <folding>
-            <marker date="1429269532315" expanded="true" signature="341:425" placeholder="UPDATE admin..." />
-            <marker date="1429269532315" expanded="true" signature="847:886" placeholder="UPDATE admin..." />
-            <marker date="1429269532315" expanded="true" signature="1265:1341" placeholder="SELECT Name,..admin..." />
+            <marker date="1429269532315" expanded="true" signature="-1:-1" placeholder="UPDATE admin..." />
+            <marker date="1429269532315" expanded="true" signature="-1:-1" placeholder="UPDATE admin..." />
+            <marker date="1429269532315" expanded="true" signature="-1:-1" placeholder="SELECT Name,..admin..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/comment_del.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.615385" vertical-offset="1125" max-vertical-offset="1581">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1581">
           <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <marker date="1429269539586" expanded="true" signature="285:340" placeholder="SELECT Time,..." />
+            <marker date="1429269539586" expanded="true" signature="-1:-1" placeholder="SELECT Time,..." />
           </folding>
         </state>
       </provider>
@@ -775,104 +504,89 @@
         <state vertical-scroll-proportion="0.673774" vertical-offset="1248" max-vertical-offset="1734">
           <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
           <folding>
-            <marker date="1429094300992" expanded="true" signature="528:614" placeholder="SELECT HostN..ftp..." />
+            <marker date="1429094300992" expanded="true" signature="-1:-1" placeholder="SELECT HostN..ftp..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ftp_del.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.769231" vertical-offset="1248" max-vertical-offset="1734">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1248" max-vertical-offset="1734">
           <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <marker date="1429094300992" expanded="true" signature="528:614" placeholder="SELECT HostN..ftp..." />
+            <marker date="1429094300992" expanded="true" signature="-1:-1" placeholder="SELECT HostN..ftp..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ftp_host.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.961538" vertical-offset="3694" max-vertical-offset="4199">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3694" max-vertical-offset="4199">
           <caret line="231" column="1" selection-start-line="231" selection-start-column="1" selection-end-line="231" selection-end-column="1" />
           <folding>
-            <marker date="1429269663467" expanded="true" signature="2083:2255" placeholder="SELECT HostN..ftp..." />
-            <marker date="1429269663467" expanded="true" signature="2795:2842" placeholder="SELECT Expir..host..." />
+            <marker date="1429269663467" expanded="true" signature="-1:-1" placeholder="SELECT HostN..ftp..." />
+            <marker date="1429269663467" expanded="true" signature="-1:-1" placeholder="SELECT Expir..host..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ftp_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.423077" vertical-offset="7959" max-vertical-offset="8415">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7959" max-vertical-offset="8415">
           <caret line="478" column="0" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
           <folding>
-            <marker date="1429269663614" expanded="true" signature="3072:3273" placeholder="SELECT host...ftp..." />
-            <marker date="1429269663614" expanded="true" signature="3530:3687" placeholder="INSERT INTO ..." />
-            <marker date="1429269663614" expanded="true" signature="3716:4072" placeholder="INSERT INTO ..." />
-            <marker date="1429269663614" expanded="true" signature="4122:4247" placeholder="INSERT INTO ..." />
-            <marker date="1429269663614" expanded="true" signature="4276:4628" placeholder="INSERT INTO ..." />
-            <marker date="1429269663614" expanded="true" signature="5189:5341" placeholder="UPDATE host ..." />
-            <marker date="1429269663614" expanded="true" signature="5385:5677" placeholder="UPDATE ftp S..." />
-            <marker date="1429269663614" expanded="true" signature="5745:5865" placeholder="UPDATE host ..." />
-            <marker date="1429269663614" expanded="true" signature="5909:6197" placeholder="UPDATE ftp S..." />
-            <marker date="1429269663614" expanded="true" signature="8083:8169" placeholder="SELECT HostN..ftp..." />
-            <marker date="1429269663614" expanded="true" signature="9942:9979" placeholder="UPDATE ftp S..." />
-            <marker date="1429269663614" expanded="true" signature="10013:10052" placeholder="UPDATE host ..." />
-            <marker date="1429269663614" expanded="true" signature="10086:10131" placeholder="UPDATE host ..." />
-            <marker date="1429269663614" expanded="true" signature="10408:10488" placeholder="SELECT HostN..ftp..." />
-            <marker date="1429269663614" expanded="true" signature="10993:11093" placeholder="UPDATE host ..." />
-            <marker date="1429269663614" expanded="true" signature="11438:11518" placeholder="SELECT HostN..ftp..." />
-            <marker date="1429269663614" expanded="true" signature="12043:12101" placeholder="UPDATE host ..." />
-            <marker date="1429269663614" expanded="true" signature="12573:12608" placeholder="SELECT HostN..ftp..." />
-            <marker date="1429269663614" expanded="true" signature="12702:12759" placeholder="UPDATE host ..." />
-            <marker date="1429269663614" expanded="true" signature="13228:13328" placeholder="SELECT host...ftp..." />
-            <marker date="1429269663614" expanded="true" signature="13813:13837" placeholder="SELECT COUNT..ftp..." />
-            <marker date="1429269663614" expanded="true" signature="13898:14110" placeholder="SELECT host...ftp..." />
-            <marker date="1429269663614" expanded="true" signature="14200:14280" placeholder="SELECT COUNT..ftp..." />
-            <marker date="1429269663614" expanded="true" signature="14341:14545" placeholder="SELECT host...ftp..." />
-            <marker date="1429269663614" expanded="true" signature="15388:15402" placeholder="..." />
-            <marker date="1429269663614" expanded="true" signature="15436:15451" placeholder="..." />
-            <marker date="1429269663614" expanded="true" signature="15811:15821" placeholder="..." />
-            <marker date="1429269663614" expanded="true" signature="15902:15917" placeholder="..." />
-            <marker date="1429269663614" expanded="true" signature="16028:16042" placeholder="..." />
-            <marker date="1429269663614" expanded="true" signature="16333:16344" placeholder="..." />
-            <marker date="1429269663614" expanded="true" signature="16938:16948" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/select.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5" vertical-offset="7252" max-vertical-offset="9537">
-          <caret line="435" column="0" selection-start-line="435" selection-start-column="0" selection-end-line="435" selection-end-column="0" />
-          <folding>
-            <marker date="1429269663582" expanded="true" signature="1702:1742" placeholder="SELECT Curre..." />
-            <marker date="1429269663582" expanded="true" signature="2079:2122" placeholder="UPDATE user ..." />
-            <marker date="1429269663582" expanded="true" signature="2282:2390" placeholder="SELECT Posit..." />
-            <marker date="1429269663582" expanded="true" signature="23566:23648" placeholder="SELECT LastC..status..." />
-            <marker date="1429269663582" expanded="true" signature="23989:24109" placeholder="SELECT COUNT..host..." />
-            <marker date="1429269663582" expanded="true" signature="24550:24670" placeholder="SELECT COUNT..host..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT host...ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE ftp S..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE ftp S..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT HostN..ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE ftp S..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT HostN..ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT HostN..ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT HostN..ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT host...ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT host...ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="SELECT host...ftp..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429269663614" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smb_del.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.153846" vertical-offset="1240" max-vertical-offset="1683">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1240" max-vertical-offset="1683">
           <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
-            <marker date="1429269677610" expanded="true" signature="424:499" placeholder="SELECT HostN..smb..." />
+            <marker date="1429269677610" expanded="true" signature="-1:-1" placeholder="SELECT HostN..smb..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smb_host.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.730769" vertical-offset="3046" max-vertical-offset="3502">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3046" max-vertical-offset="3502">
           <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding>
-            <marker date="1429269693352" expanded="true" signature="1161:1292" placeholder="SELECT host...smb..." />
-            <marker date="1429269693352" expanded="true" signature="1631:1678" placeholder="SELECT Expir..host..." />
+            <marker date="1429269693352" expanded="true" signature="-1:-1" placeholder="SELECT host...smb..." />
+            <marker date="1429269693352" expanded="true" signature="-1:-1" placeholder="SELECT Expir..host..." />
           </folding>
         </state>
       </provider>
@@ -884,48 +598,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="7967" max-vertical-offset="8398">
           <caret line="477" column="0" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smb_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.153846" vertical-offset="7998" max-vertical-offset="8670">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7998" max-vertical-offset="8670">
           <caret line="486" column="14" selection-start-line="486" selection-start-column="4" selection-end-line="486" selection-end-column="14" />
           <folding>
-            <marker date="1429269699867" expanded="true" signature="1880:1985" placeholder="SELECT host...smb..." />
-            <marker date="1429269699867" expanded="true" signature="2134:2291" placeholder="INSERT INTO ..." />
-            <marker date="1429269699867" expanded="true" signature="2329:2454" placeholder="INSERT INTO ..." />
-            <marker date="1429269699867" expanded="true" signature="2482:2615" placeholder="INSERT INTO ..." />
-            <marker date="1429269699867" expanded="true" signature="3014:3166" placeholder="UPDATE host ..." />
-            <marker date="1429269699867" expanded="true" signature="3220:3340" placeholder="UPDATE host ..." />
-            <marker date="1429269699867" expanded="true" signature="3383:3452" placeholder="UPDATE smb S..." />
-            <marker date="1429269699867" expanded="true" signature="4776:4842" placeholder="SELECT IP,Fl..smb..." />
-            <marker date="1429269699867" expanded="true" signature="6793:6830" placeholder="UPDATE smb S..." />
-            <marker date="1429269699867" expanded="true" signature="6864:6903" placeholder="UPDATE host ..." />
-            <marker date="1429269699867" expanded="true" signature="6937:6982" placeholder="UPDATE host ..." />
-            <marker date="1429269699867" expanded="true" signature="7259:7328" placeholder="SELECT HostN..smb..." />
-            <marker date="1429269699867" expanded="true" signature="7630:7730" placeholder="UPDATE host ..." />
-            <marker date="1429269699867" expanded="true" signature="8075:8144" placeholder="SELECT HostN..smb..." />
-            <marker date="1429269699867" expanded="true" signature="8466:8548" placeholder="UPDATE host ..." />
-            <marker date="1429269699867" expanded="true" signature="9020:9055" placeholder="SELECT HostN..smb..." />
-            <marker date="1429269699867" expanded="true" signature="9149:9230" placeholder="UPDATE host ..." />
-            <marker date="1429269699867" expanded="true" signature="9665:9765" placeholder="SELECT host...smb..." />
-            <marker date="1429269699867" expanded="true" signature="10250:10274" placeholder="SELECT COUNT..smb..." />
-            <marker date="1429269699867" expanded="true" signature="10335:10506" placeholder="SELECT host...smb..." />
-            <marker date="1429269699867" expanded="true" signature="10596:10676" placeholder="SELECT COUNT..smb..." />
-            <marker date="1429269699867" expanded="true" signature="10737:10900" placeholder="SELECT host...smb..." />
-            <marker date="1429269699867" expanded="true" signature="16655:16749" placeholder="SELECT SID,S..share..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT host...smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE smb S..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT IP,Fl..smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE smb S..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT HostN..smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT HostN..smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT HostN..smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="UPDATE host ..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT host...smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT host...smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT host...smb..." />
+            <marker date="1429269699867" expanded="true" signature="-1:-1" placeholder="SELECT SID,S..share..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vars.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.070073" vertical-offset="114" max-vertical-offset="3859">
-          <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+        <state vertical-scroll-proportion="-18.5" vertical-offset="114" max-vertical-offset="3859">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
           <folding>
-            <marker date="1429270686785" expanded="true" signature="3412:3489" placeholder="..." />
+            <marker date="1429270686785" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/romanian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="30.076923" vertical-offset="1530" max-vertical-offset="4964">
+          <caret line="44" column="79" selection-start-line="44" selection-start-column="79" selection-end-line="44" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2559524" vertical-offset="5064" max-vertical-offset="9554">
+          <caret line="308" column="72" selection-start-line="308" selection-start-column="72" selection-end-line="308" selection-end-column="72" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -298,9 +298,6 @@ require_once("menu.php");
                 <input type="submit" value="Search" class="btn btn-lg btn-success" />
             </div>
         </div>
-
-
-
         <div class="form-group row">
             <?php
             $n = count($file_types);
@@ -412,17 +409,17 @@ require_once("menu.php");
                         ?>
                     </div>
 
-                            <?php
-                            if ($c["FTP_DISABLE"] + $c["SMB_DISABLE"] < 1) {
-                                ?>
+                    <?php
+                    if ($c["FTP_DISABLE"] + $c["SMB_DISABLE"] < 1) {
+                        ?>
 
-                                        <?php echo $tr["Hits per page"]; ?>:
-                                        <input type="text" name="hits"
-                                               value="<?php echo htmlspecialchars($history[0]["hits"]); ?>" size="5"/>
+                        <?php echo $tr["Hits per page"]; ?>:
+                        <input type="text" name="hits"
+                               value="<?php echo htmlspecialchars($history[0]["hits"]); ?>" size="5"/>
 
-                            <?php
-                            }
-                            ?>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         <?php
@@ -431,125 +428,129 @@ require_once("menu.php");
     </div>
 </div>
 
+<div class="container">
+    <?php
 
-<?php
-
-if ($n_history > 0) {
+    if ($n_history > 0) {
+        ?>
+        <br/>
+        <table  border="0" cellpadding="0" cellspacing="0" class="table">
+            <tr>
+                <td bgcolor="<?php echo $color_border; ?>">
+                    <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                        <tr>
+                            <td bgcolor="<?php echo $color_wt; ?>"><b><?php echo $tr["Your history"]; ?></b></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="<?php echo $color_wb; ?>">
+                                <?php
+                                $printed = 0;
+                                for ($i = 0; $i < $c["HISTORY_COUNT"]; $i++) {
+                                    if ($history[$i]["searchstring"] == '')
+                                        continue;
+                                    if ($printed > 0)
+                                        echo ' | ';
+                                    echo "<a href=\"javascript:setAll('", htmlspecialchars(addslashes($history[$i]["searchstring"])), "',", $history[$i]["mode"], ",", $history[$i]["flags"], ",", $history[$i]["hosttype"], ",", $history[$i]["date"], ",'", $history[$i]["timestr"], "',", $history[$i]["dateday"], ",", $history[$i]["datemonth"], ",", $history[$i]["dateyear"], ",", $history[$i]["hits"], ",'", $history[$i]["minfilesize"], "','", $history[$i]["maxfilesize"], "')\">", htmlspecialchars($history[$i]["searchstring"]), '</a>';
+                                    $printed++;
+                                }
+                                ?>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    <?php
+    }
     ?>
     <br/>
-    <table width="<?php echo $menu_width; ?>" border="0" cellpadding="1" cellspacing="0">
+
+
+    <table cellpadding="0" cellspacing="0" class="table">
+        <tr>
+            <td><b>Statistics</b></td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <?php
+                        echo '<td align="right">Last change</td>';
+                        if (!$c["FTP_DISABLE"])
+                            echo '<td align="right">FTPs</td>';
+                        if (!$c["SMB_DISABLE"])
+                            echo '<td align="right">SMBs</td>';
+                        echo '<td align="right">Directories</td>';
+                        echo '<td align="right">Files</td>';
+                        echo '<td align="right">Total size</td>';
+                        echo '<td align="right">Queries</td>';
+                        ?>
+                    </tr>
+
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <?php
+                        $q = mysql_query("SELECT LastChange,SMBHosts,FTPHosts,Directories,Files,FileSize,Queries FROM status", $db);
+                        $value = mysql_fetch_assoc($q);
+                        echo '<td align="right">', $value["LastChange"], '</td>';
+                        if (!$c["FTP_DISABLE"]) {
+                            $flags_needed = HOST_ONLINE;
+                            $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_FTP . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
+                            $rr = mysql_fetch_row($qq);
+                            echo '<td align="right">', $value["FTPHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
+                        }
+                        if (!$c["SMB_DISABLE"]) {
+                            $flags_needed = HOST_ONLINE;
+                            $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_SMB . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
+                            $rr = mysql_fetch_row($qq);
+                            echo '<td align="right">', $value["SMBHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
+                        }
+                        echo '<td align="right">', $value["Directories"], '</td>';
+                        echo '<td align="right">', $value["Files"], '</td>';
+                        echo '<td align="right" nowrap="nowrap">', to_human_readable($value["FileSize"]), '</td>';
+                        echo '<td align="right">', $value["Queries"], "</td>\n";
+                        mysql_free_result($q);
+                        ?>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+    <?php
+    require_once("help_search.php");
+    ?>
+    <br/>
+    <table  border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td bgcolor="<?php echo $color_border; ?>">
                 <table width="100%" border="0" cellpadding="3" cellspacing="0">
                     <tr>
-                        <td bgcolor="<?php echo $color_wt; ?>"><b><?php echo $tr["Your history"]; ?></b></td>
+                        <td bgcolor="<?php echo $color_wt; ?>"><b>Copyright</b></td>
                     </tr>
                     <tr>
                         <td bgcolor="<?php echo $color_wb; ?>">
-                            <?php
-                            $printed = 0;
-                            for ($i = 0; $i < $c["HISTORY_COUNT"]; $i++) {
-                                if ($history[$i]["searchstring"] == '')
-                                    continue;
-                                if ($printed > 0)
-                                    echo ' | ';
-                                echo "<a href=\"javascript:setAll('", htmlspecialchars(addslashes($history[$i]["searchstring"])), "',", $history[$i]["mode"], ",", $history[$i]["flags"], ",", $history[$i]["hosttype"], ",", $history[$i]["date"], ",'", $history[$i]["timestr"], "',", $history[$i]["dateday"], ",", $history[$i]["datemonth"], ",", $history[$i]["dateyear"], ",", $history[$i]["hits"], ",'", $history[$i]["minfilesize"], "','", $history[$i]["maxfilesize"], "')\">", htmlspecialchars($history[$i]["searchstring"]), '</a>';
-                                $printed++;
-                            }
-                            ?>
+                            Copyright &copy; 2002-2005 <a href="http://zlomek.jikos.cz/" target="_blank">Josef
+                                Zlomek</a> <?php echo $tr["and"]; ?> <a
+                                href="http://ffsearch.sourceforge.net/contrib.php#contributors"
+                                target="_blank"><?php echo $tr["others"]; ?></a><br/>
+                            <a href="http://ffsearch.sourceforge.net/" target="_blank">Fast File
+                                Search</a> <?php echo $tr["uses some code from"]; ?> <a
+                                href="http://femfind.sourceforge.net/" target="_blank">FemFind</a>.<br/>
+                            Fast File Search <?php echo $tr["is distributed under the"]; ?> <a href="http://www.gnu.org/"
+                                                                                               target="_blank">GNU</a> <a
+                                href="http://www.gnu.org/licenses/gpl.html" target="_blank">General Public License</a>.<br/>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
     </table>
-<?php
-}
-?>
-<br/>
-<table width="<?php echo $menu_width; ?>" border="0" cellpadding="1" cellspacing="0">
-    <tr>
-        <td bgcolor="<?php echo $color_border; ?>">
-            <table width="100%" border="0" cellpadding="3" cellspacing="0">
-                <tr>
-                    <td bgcolor="<?php echo $color_wt; ?>"><b><?php echo $tr["Statistics"]; ?></b></td>
-                </tr>
-                <tr>
-                    <td bgcolor="<?php echo $color_wb; ?>">
-                        <table width="100%" border="0">
-                            <tr bgcolor="<?php echo $color_tt; ?>">
-                                <?php
-                                echo '<td align="right">', $tr["Last change"], '</td>';
-                                if (!$c["FTP_DISABLE"])
-                                    echo '<td align="right">', $tr["FTPs"], '</td>';
-                                if (!$c["SMB_DISABLE"])
-                                    echo '<td align="right">', $tr["SMBs"], '</td>';
-                                echo '<td align="right">', $tr["Directories"], '</td>';
-                                echo '<td align="right">', $tr["Files"], '</td>';
-                                echo '<td align="right">', $tr["Total size"], '</td>';
-                                echo '<td align="right">', $tr["Queries"], '</td>';
-                                ?>
-                            </tr>
-                            <tr bgcolor="<?php echo $color_tb; ?>">
-                                <?php
-                                $q = mysql_query("SELECT LastChange,SMBHosts,FTPHosts,Directories,Files,FileSize,Queries FROM status", $db);
-                                $value = mysql_fetch_assoc($q);
-                                echo '<td align="right">', $value["LastChange"], '</td>';
-                                if (!$c["FTP_DISABLE"]) {
-                                    $flags_needed = HOST_ONLINE;
-                                    $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_FTP . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
-                                    $rr = mysql_fetch_row($qq);
-                                    echo '<td align="right">', $value["FTPHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
-                                }
-                                if (!$c["SMB_DISABLE"]) {
-                                    $flags_needed = HOST_ONLINE;
-                                    $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_SMB . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
-                                    $rr = mysql_fetch_row($qq);
-                                    echo '<td align="right">', $value["SMBHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
-                                }
-                                echo '<td align="right">', $value["Directories"], '</td>';
-                                echo '<td align="right">', $value["Files"], '</td>';
-                                echo '<td align="right" nowrap="nowrap">', to_human_readable($value["FileSize"]), '</td>';
-                                echo '<td align="right">', $value["Queries"], "</td>\n";
-                                mysql_free_result($q);
-                                ?>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-<?php
-require_once("help_search.php");
-?>
-<br/>
-<table width="<?php echo $menu_width; ?>" border="0" cellpadding="1" cellspacing="0">
-    <tr>
-        <td bgcolor="<?php echo $color_border; ?>">
-            <table width="100%" border="0" cellpadding="3" cellspacing="0">
-                <tr>
-                    <td bgcolor="<?php echo $color_wt; ?>"><b>Copyright</b></td>
-                </tr>
-                <tr>
-                    <td bgcolor="<?php echo $color_wb; ?>">
-                        Copyright &copy; 2002-2005 <a href="http://zlomek.jikos.cz/" target="_blank">Josef
-                            Zlomek</a> <?php echo $tr["and"]; ?> <a
-                            href="http://ffsearch.sourceforge.net/contrib.php#contributors"
-                            target="_blank"><?php echo $tr["others"]; ?></a><br/>
-                        <a href="http://ffsearch.sourceforge.net/" target="_blank">Fast File
-                            Search</a> <?php echo $tr["uses some code from"]; ?> <a
-                            href="http://femfind.sourceforge.net/" target="_blank">FemFind</a>.<br/>
-                        Fast File Search <?php echo $tr["is distributed under the"]; ?> <a href="http://www.gnu.org/"
-                                                                                           target="_blank">GNU</a> <a
-                            href="http://www.gnu.org/licenses/gpl.html" target="_blank">General Public License</a>.<br/>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
+</div>
 <?php
 require_once("foot.php");
 ?>
