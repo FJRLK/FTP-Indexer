@@ -91,6 +91,6 @@ if (!$error)
 </td></tr>
 <?php
 }
-require_once ("menu_end.php");
+
 require_once ("foot.php");
 ?>

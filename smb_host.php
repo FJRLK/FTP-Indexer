@@ -189,7 +189,7 @@ if (!$error)
 </td></tr>
 <?php
 }
-require_once ("menu_end.php");
+
 if (!$error)
 {
 	$is_admin = $rights & RIGHT_SMB_EDIT;

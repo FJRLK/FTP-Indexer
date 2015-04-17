@@ -433,7 +433,7 @@ require_once("menu.php");
 
 
 <?php
-require_once("menu_end.php");
+
 if ($n_history > 0) {
     ?>
     <br/>

@@ -165,26 +165,37 @@ function echo_links ($script, $additional_parameters)
 	global $n, $position, $max_position, $per_page;
 	global $color_wb, $per_page, $lang, $aid;
 
+    echo '<nav><ul class="pagination">';
+
 	if ($n)
 	{
 		for ($i = 0; $i <= $max_position; $i += $per_page)
 		{
+            if ($i != $position)
+                echo '<li>';
+            else
+                echo '<li class="active">';
+
 			if ($i != $position)
 				echo '<a href="', $script, '?lang=', $lang, $aid, '&amp;position=', $i, $additional_parameters, '">';
+            else
+                echo '<a>';
 			echo $i + 1, "-", $i == $max_position ? $n : $i + $per_page;
-			if ($i != $position)
+
 				echo '</a>';
-			echo "\n";
+
+			echo "</li>";
 		}
 	}
 	else
 		echo "&nbsp;";
+
+    echo ' </ul></nav>';
 }
 
 function to_human_readable ($size)
 {
 	if ($size >= 1 * 1048576 * 1048576)
-		//return intval ($size / 1048576 / 1048576) . "&nbsp;TB";
 		return number_format(($size / 1048576 / 1048576), 2, '.', '') . "&nbsp;TB";
 
 	if ($size >= 8 * 1048576 * 1024)

@@ -491,7 +491,7 @@ if ($n)
 </td></tr>
 <?php
 }
-require_once ("menu_end.php");
+
 
 if ($n > 0 && ($rights & RIGHT_SMB_EDIT))
 {
