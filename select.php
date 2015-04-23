@@ -427,39 +427,30 @@ require_once("menu.php");
         ?>
     </div>
 </div>
-
 <div class="container">
     <?php
 
     if ($n_history > 0) {
         ?>
         <br/>
-        <table  border="0" cellpadding="0" cellspacing="0" class="table">
-            <tr>
-                <td bgcolor="<?php echo $color_border; ?>">
-                    <table width="100%" border="0" cellpadding="3" cellspacing="0">
-                        <tr>
-                            <td bgcolor="<?php echo $color_wt; ?>"><b><?php echo $tr["Your history"]; ?></b></td>
-                        </tr>
-                        <tr>
-                            <td bgcolor="<?php echo $color_wb; ?>">
-                                <?php
-                                $printed = 0;
-                                for ($i = 0; $i < $c["HISTORY_COUNT"]; $i++) {
-                                    if ($history[$i]["searchstring"] == '')
-                                        continue;
-                                    if ($printed > 0)
-                                        echo ' | ';
-                                    echo "<a href=\"javascript:setAll('", htmlspecialchars(addslashes($history[$i]["searchstring"])), "',", $history[$i]["mode"], ",", $history[$i]["flags"], ",", $history[$i]["hosttype"], ",", $history[$i]["date"], ",'", $history[$i]["timestr"], "',", $history[$i]["dateday"], ",", $history[$i]["datemonth"], ",", $history[$i]["dateyear"], ",", $history[$i]["hits"], ",'", $history[$i]["minfilesize"], "','", $history[$i]["maxfilesize"], "')\">", htmlspecialchars($history[$i]["searchstring"]), '</a>';
-                                    $printed++;
-                                }
-                                ?>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+        <div class="well">
+            <div class="container">
+                <h4><b>Your history</b></h4>
+                <div>
+                    <?php
+                    $printed = 0;
+                    for ($i = 0; $i < $c["HISTORY_COUNT"]; $i++) {
+                        if ($history[$i]["searchstring"] == '')
+                            continue;
+                        if ($printed > 0)
+                            echo ' | ';
+                        echo "<a href=\"javascript:setAll('", htmlspecialchars(addslashes($history[$i]["searchstring"])), "',", $history[$i]["mode"], ",", $history[$i]["flags"], ",", $history[$i]["hosttype"], ",", $history[$i]["date"], ",'", $history[$i]["timestr"], "',", $history[$i]["dateday"], ",", $history[$i]["datemonth"], ",", $history[$i]["dateyear"], ",", $history[$i]["hits"], ",'", $history[$i]["minfilesize"], "','", $history[$i]["maxfilesize"], "')\">", htmlspecialchars($history[$i]["searchstring"]), '</a>';
+                        $printed++;
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
     <?php
     }
     ?>
@@ -479,8 +470,6 @@ require_once("menu.php");
                         echo '<td align="right">Last change</td>';
                         if (!$c["FTP_DISABLE"])
                             echo '<td align="right">FTPs</td>';
-                        if (!$c["SMB_DISABLE"])
-                            echo '<td align="right">SMBs</td>';
                         echo '<td align="right">Directories</td>';
                         echo '<td align="right">Files</td>';
                         echo '<td align="right">Total size</td>';
@@ -500,12 +489,6 @@ require_once("menu.php");
                             $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_FTP . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
                             $rr = mysql_fetch_row($qq);
                             echo '<td align="right">', $value["FTPHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
-                        }
-                        if (!$c["SMB_DISABLE"]) {
-                            $flags_needed = HOST_ONLINE;
-                            $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_SMB . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
-                            $rr = mysql_fetch_row($qq);
-                            echo '<td align="right">', $value["SMBHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
                         }
                         echo '<td align="right">', $value["Directories"], '</td>';
                         echo '<td align="right">', $value["Files"], '</td>';
