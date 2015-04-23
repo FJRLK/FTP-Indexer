@@ -457,12 +457,13 @@ if ($n)		# n tokens in searchstring
 }
 
 ?>
-<table width="100%" border="0" cellpadding="1" cellspacing="0"><tr><td bgcolor="<?php echo $color_border; ?>">
-<table width="100%" border="0" cellpadding="3" cellspacing="0">
-<tr><td bgcolor="<?php echo $color_wt; ?>">
+<div class="container">
+<table width="100%" class="table table-bordered" border="0" cellpadding="1" cellspacing="0"><tr><td bgcolor="<?php echo $color_border; ?>">
+<table width="100%" class="table table-bordered" border="0" cellpadding="3" cellspacing="0">
+<tr><td >
 <b><?php echo $tr["Results for"], " [", htmlspecialchars ($searchstring), "]"; ?></b>
 </td></tr>
-<tr><td bgcolor="<?php echo $color_fl; ?>">
+<tr><td >
 <?php
 	if ($n == $hits)
 	{
@@ -472,7 +473,7 @@ if ($n)		# n tokens in searchstring
 ?>
 <a href="select.php?lang=<?php echo $lang, $aid; ?>"><?php echo $tr["New search"]; ?></a>
 </td></tr>
-<tr><td bgcolor="<?php echo $color_fl; ?>">
+<tr><td >
 <i><font color="<?php echo $color_hit_range; ?>" class="h1">
 <?php
 	if ($n == 0)
@@ -527,14 +528,14 @@ if ($n > 0)
 	}
 	mysql_data_seek ($q, 0);
 ?>
-<tr><td bgcolor="<?php echo $color_fl; ?>">
-<table width="100%" border="0" cellpadding="1" cellspacing="0" class="l1">
+<tr><td >
+<table width="100%" class="table table-bordered" border="0" cellpadding="1" cellspacing="0" class="l1">
 <?php
 	# print the results
 	$justflag = 0;
 	while ($row = mysql_fetch_assoc ($q))
 	{
-		echo '<tr bgcolor="', $justflag ? $color_bg_dark : $color_bg_light, '"><td>';
+		echo '<tr ><td>';
 		if ($host[$row["HID"]]["online"])
 			echo '<img src="online.gif" alt="on" class="o" />';
 		else
@@ -562,7 +563,7 @@ if ($n > 0)
 <?php
 }
 ?>
-<tr><td bgcolor="<?php echo $color_fl; ?>">
+<tr><td >
 <font color="<?php echo $color_hits_time; ?>" class="h1">
 <?php
 list ($end_microtime, $end_time) = explode (" ", microtime ());
@@ -574,13 +575,13 @@ if ($c["LOGGING_ENABLE"] && $LID)
 ?>
 </font>
 </td></tr>
-<tr><td bgcolor="<?php echo $color_fl; ?>">
+<tr><td >
 <?php
 echo $more;
 ?>
 <a href="select.php?lang=<?php echo $lang, $aid; ?>"><?php echo $tr["New search"]; ?></a>
 </td></tr>
-<tr><td bgcolor="<?php echo $color_wt; ?>">
+<tr><td >
 <?php
 if ($c["LOGGING_ENABLE"] && $LID)
 {
@@ -592,6 +593,7 @@ if ($c["LOGGING_ENABLE"] && $LID)
 </td></tr>
 </table>
 </td></tr></table>
+</div>
 <?php
 require_once ("foot.php");
 ?>
