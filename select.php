@@ -456,27 +456,20 @@ require_once("menu.php");
     ?>
     <br/>
 
-
-    <table cellpadding="0" cellspacing="0" class="table">
-        <tr>
-            <td><b>Statistics</b></td>
-        </tr>
-        <tr>
-            <td>
-                <table cellpadding="0" cellspacing="0" class="table table-bordered">
+    <div class="well">
+        <div class="container">
+            <h4><b>Statistics</b></h4>
+            <div class="col-xs-11">
+                <table cellpadding="0" cellspacing="0" class="table table-bordered ">
                     <thead>
                     <tr>
-                        <?php
-                        echo '<td align="right">Last change</td>';
-                        if (!$c["FTP_DISABLE"])
-                            echo '<td align="right">FTPs</td>';
-                        echo '<td align="right">Directories</td>';
-                        echo '<td align="right">Files</td>';
-                        echo '<td align="right">Total size</td>';
-                        echo '<td align="right">Queries</td>';
-                        ?>
+                        <th align="right">Last change</th>
+                        <th align="right">FTPs</th>
+                        <th align="right">Directories</th>
+                        <th align="right">Files</th>
+                        <th align="right">Total size</th>
+                        <th align="right">Queries</th>
                     </tr>
-
                     </thead>
                     <tbody>
                     <tr>
@@ -484,12 +477,12 @@ require_once("menu.php");
                         $q = mysql_query("SELECT LastChange,SMBHosts,FTPHosts,Directories,Files,FileSize,Queries FROM status", $db);
                         $value = mysql_fetch_assoc($q);
                         echo '<td align="right">', $value["LastChange"], '</td>';
-                        if (!$c["FTP_DISABLE"]) {
-                            $flags_needed = HOST_ONLINE;
-                            $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_FTP . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
-                            $rr = mysql_fetch_row($qq);
-                            echo '<td align="right">', $value["FTPHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
-                        }
+
+                        $flags_needed = HOST_ONLINE;
+                        $qq = mysql_query("SELECT COUNT(*) FROM host WHERE HostType=" . HOSTTYPE_FTP . " AND Flags&$flags_needed=$flags_needed AND TotalFileSize>=0", $db);
+                        $rr = mysql_fetch_row($qq);
+                        echo '<td align="right">', $value["FTPHosts"], ' (<img src="online.gif" alt="on" class="o" />&nbsp;', $rr[0], ')</td>';
+
                         echo '<td align="right">', $value["Directories"], '</td>';
                         echo '<td align="right">', $value["Files"], '</td>';
                         echo '<td align="right" nowrap="nowrap">', to_human_readable($value["FileSize"]), '</td>';
@@ -499,40 +492,37 @@ require_once("menu.php");
                     </tr>
                     </tbody>
                 </table>
-            </td>
-        </tr>
-    </table>
-
-
+            </div>
+        </div>
+    </div>
     <?php
     require_once("help_search.php");
     ?>
-    <br/>
-    <table  border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td bgcolor="<?php echo $color_border; ?>">
-                <table width="100%" border="0" cellpadding="3" cellspacing="0">
-                    <tr>
-                        <td bgcolor="<?php echo $color_wt; ?>"><b>Copyright</b></td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="<?php echo $color_wb; ?>">
-                            Copyright &copy; 2002-2005 <a href="http://zlomek.jikos.cz/" target="_blank">Josef
-                                Zlomek</a> <?php echo $tr["and"]; ?> <a
-                                href="http://ffsearch.sourceforge.net/contrib.php#contributors"
-                                target="_blank"><?php echo $tr["others"]; ?></a><br/>
-                            <a href="http://ffsearch.sourceforge.net/" target="_blank">Fast File
-                                Search</a> <?php echo $tr["uses some code from"]; ?> <a
-                                href="http://femfind.sourceforge.net/" target="_blank">FemFind</a>.<br/>
-                            Fast File Search <?php echo $tr["is distributed under the"]; ?> <a href="http://www.gnu.org/"
-                                                                                               target="_blank">GNU</a> <a
-                                href="http://www.gnu.org/licenses/gpl.html" target="_blank">General Public License</a>.<br/>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+</div>
+<br/>
+<div class="jumbotron">
+    <div class="container">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td><b>Copyright</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="<?php echo $color_wb; ?>">
+                    Copyright &copy; 2002-2005 <a href="http://zlomek.jikos.cz/" target="_blank">Josef
+                        Zlomek</a> <?php echo $tr["and"]; ?> <a
+                        href="http://ffsearch.sourceforge.net/contrib.php#contributors"
+                        target="_blank"><?php echo $tr["others"]; ?></a><br/>
+                    <a href="http://ffsearch.sourceforge.net/" target="_blank">Fast File
+                        Search</a> <?php echo $tr["uses some code from"]; ?> <a
+                        href="http://femfind.sourceforge.net/" target="_blank">FemFind</a>.<br/>
+                    Fast File Search <?php echo $tr["is distributed under the"]; ?> <a href="http://www.gnu.org/"
+                                                                                       target="_blank">GNU</a> <a
+                        href="http://www.gnu.org/licenses/gpl.html" target="_blank">General Public License</a>.<br/>
+                </td>
+            </tr>
+        </table>
+
+    </div>
 </div>
 <?php
 require_once("foot.php");
