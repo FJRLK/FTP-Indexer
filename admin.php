@@ -53,55 +53,59 @@ if ($connected2master)
 else
 	$n = 0;
 
-echo '<tr><td bgcolor="', $color_wt, '">';
+echo '<div style="clear:both;height:20px"></div>';
 if ($AID && $connected2master)
 {
 ?>
-<table width="100%" border="0" cellpadding="4" cellspacing="0">
-<tr><td width="50%"><?php echo $message; ?>
-<table border="0" cellpadding="3" cellspacing="0">
-<tr>
-<td align="right"><?php echo $tr["New password"]; ?></td>
-<td><input type="password" name="password1" /></td>
-</tr>
-<tr>
-<td align="right"><?php echo $tr["Reenter password"]; ?></td>
-<td><input type="password" name="password2" /></td>
-</tr>
-<tr>
-<td colspan="2" align="right"><input type="submit" name="change" value="<?php echo $tr["Change password"]; ?>" /></td>
-</tr>
-</table>
-</td><td width="50%" align="right" valign="bottom">
-<table border="0" cellpadding="3" cellspacing="0">
-<tr><td align="right">
-<input type="submit" name="logout" value="<?php echo $tr["Logout"]; ?>" />
-</td></tr>
-</table>
-</td></tr>
-</table>
+
+
+<div class="jumbotron">
+    <div class="container">
+<?php echo $message; ?>
+        <table border="0" cellpadding="3" cellspacing="0">
+            <tr>
+                <td align="right"><?php echo $tr["New password"]; ?></td>
+                <td><input type="password" name="password1" /></td>
+            </tr>
+            <tr>
+                <td align="right"><?php echo $tr["Reenter password"]; ?></td>
+                <td><input type="password" name="password2" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"><input type="submit" name="change" value="<?php echo $tr["Change password"]; ?>" /></td>
+            </tr>
+        </table>
+        <table border="0" cellpadding="3" cellspacing="0">
+            <tr><td align="right">
+                    <input type="submit" name="logout" value="<?php echo $tr["Logout"]; ?>" />
+                </td></tr>
+        </table>
+    </div>
+</div>
 <?php
 }
 elseif ($n)
 {
 ?>
-<table width="100%" border="0" cellpadding="4" cellspacing="0">
-<tr><td align="center">
-<table border="0" cellpadding="3" cellspacing="0">
-<tr>
-<td align="right"><?php echo $tr["Login name"]; ?></td>
-<td><input type="text" name="admin_login" /></td>
-</tr>
-<tr>
-<td align="right"><?php echo $tr["Password"]; ?></td>
-<td><input type="password" name="admin_password" /></td>
-</tr>
-<tr>
-<td colspan="2" align="right"><input type="submit" name="login" value="<?php echo $tr["Login"]; ?>" /></td>
-</tr>
-</table>
-</td></tr>
-</table>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="form-group">
+
+                <div class="col-lg-7">
+                    Login name <input type="text" name="admin_login" class="form-control"/>
+                </div>
+                <br>
+                <div class="col-lg-7">
+                    Password <input type="password" name="admin_password" class="form-control"/>
+                </div>
+                <br>
+                <br>
+                <div class="col-lg-7">
+                    <input type="submit" name="login" value="Login" class="btn btn-primary"/>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php
 }
 else
