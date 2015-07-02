@@ -21,7 +21,7 @@ echo '<?xml version="1.0" encoding="', $encoding, '" ?>', "\n";
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="MSSmartTagsPreventParsing" content="TRUE" />
-    <link rel="StyleSheet" type="text/css" href="styles.css" />
+
 
     <title>Fast File Search</title>
     <link rel="StyleSheet" type="text/css" href="styles.css"/>

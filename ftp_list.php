@@ -309,171 +309,171 @@ else
 }
 ?>
 <div style="clear:both;height:50px"></div>
-<tr><td bgcolor="<?php echo $color_wt; ?>">
-<table width="100%" border="0" cellpadding="3" cellspacing="0">
-<tr valign="bottom"><td align="left">
-<?php
-echo $message;
-echo_links ("ftp_list.php", "&amp;sort_by=$sort_by");
-?>
-</td>
-<td align="right">
-<?php
-if ($connected2master && ($rights & RIGHT_FTP_ADD))
-{
-	echo '<a href="ftp_host.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by", '">', $tr["Add FTP server"], '</a>';
-}
-?>
-</td></tr>
-</table>
-</td></tr>
+<div class="container">
+    <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr valign="bottom"><td align="left">
+                <?php
+                echo $message;
+                echo_links ("ftp_list.php", "&amp;sort_by=$sort_by");
+                ?>
+            </td>
+            <td align="right">
+                <?php
+                if ($connected2master && ($rights & RIGHT_FTP_ADD))
+                {
+                    echo '<a href="ftp_host.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by", '">', $tr["Add FTP server"], '</a>';
+                }
+                ?>
+            </td></tr>
+    </table>
+</div>
 <?php
 if ($n)
 {
 ?>
-<tr><td bgcolor="<?php echo $color_wb; ?>">
-<table width="100%" border="0" cellpadding="3" cellspacing="0">
-<tr><td>
-	<table width="100%" border="0" cellpadding="2" class="table table-responsive table-bordered">
-	<tr bgcolor="<?php echo $color_tt; ?>">
-<?php
-	echo "<td style='min-width:20px'>&nbsp;</td>";
-	echo "<td style='min-width:100px'><b>";
-	if ($sort_by != 'name')
-		echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=name", '">';
-	echo $tr["Host"];
-	if ($sort_by != 'name')
-		echo '</a>';
-	/*echo "<br />", $tr["Starting directory"];*/
+    <div class="container">
+        <table width="100%" border="0" cellpadding="3" cellspacing="0">
+            <tr><td>
+                    <table width="100%" border="0" cellpadding="2" class="table table-responsive table-bordered">
+                        <tr bgcolor="<?php echo $color_tt; ?>">
+                            <?php
+                            echo "<td style='min-width:20px'>&nbsp;</td>";
+                            echo "<td style='min-width:100px'><b>";
+                            if ($sort_by != 'name')
+                                echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=name", '">';
+                            echo $tr["Host"];
+                            if ($sort_by != 'name')
+                                echo '</a>';
+                            /*echo "<br />", $tr["Starting directory"];*/
 
-	if ($rights & RIGHT_FTP_EDIT)
-		echo "<br />", $tr["Editable by"];
-	echo "</b></td>";
-	echo '<td align="right" style="width:35px"><b>', $tr["Port"], '</b></td>';
-	if ($c["SHOW_LOGIN_PASS"])
-		echo "<td style='min-width:100px'><b>", $tr["Login"], "<br />", $tr["Password"], "</b></td>";
-	if ($c["HOST_FILE_SIZE"])
-	{
-		echo '<td style="min-width:55px" align="right"><b>';
-		if ($sort_by != 'size')
-			echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=size", '">';
-		echo $tr["File size"];
-		if ($sort_by != 'size')
-			echo '</a>';
-		echo '</b></td>';
-	}
-	if ($c["SHOW_LAST_CHANGE"])
-	{
-		echo '<td style="width:110px"><b>';
-		if ($sort_by != 'date')
-			echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=date", '">';
-		echo $tr["Last change"];
-		if ($sort_by != 'date')
-			echo '</a>';
-		echo '</b></td>';
-	}
-	echo "<td><b>", $tr["Comment"], "</b></td>";
-	if ($rights & RIGHT_FTP_EDIT)
-	{
-		echo "<td><b>", $tr["Period"], "</b></td>";
-		echo "<td><b>", $tr["Counter"], "</b></td>";
-		echo "<td><b>", $tr["Scan order"], "</b></td>";
-		echo "<td><b>", $tr["Expire count"], "</b></td>";
-		echo "<td><b>", $tr["Flags"], "</b></td>";
-	}
-	if ($connected2master)
-		echo "<td style='width:45px'><b>", $tr["Action"], "</b></td>";
-	echo "</tr>";
+                            if ($rights & RIGHT_FTP_EDIT)
+                                echo "<br />", $tr["Editable by"];
+                            echo "</b></td>";
+                            echo '<td align="right" style="width:35px"><b>', $tr["Port"], '</b></td>';
+                            if ($c["SHOW_LOGIN_PASS"])
+                                echo "<td style='min-width:100px'><b>", $tr["Login"], "<br />", $tr["Password"], "</b></td>";
+                            if ($c["HOST_FILE_SIZE"])
+                            {
+                                echo '<td style="min-width:55px" align="right"><b>';
+                                if ($sort_by != 'size')
+                                    echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=size", '">';
+                                echo $tr["File size"];
+                                if ($sort_by != 'size')
+                                    echo '</a>';
+                                echo '</b></td>';
+                            }
+                            if ($c["SHOW_LAST_CHANGE"])
+                            {
+                                echo '<td style="width:110px"><b>';
+                                if ($sort_by != 'date')
+                                    echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=date", '">';
+                                echo $tr["Last change"];
+                                if ($sort_by != 'date')
+                                    echo '</a>';
+                                echo '</b></td>';
+                            }
+                            echo "<td><b>", $tr["Comment"], "</b></td>";
+                            if ($rights & RIGHT_FTP_EDIT)
+                            {
+                                echo "<td><b>", $tr["Period"], "</b></td>";
+                                echo "<td><b>", $tr["Counter"], "</b></td>";
+                                echo "<td><b>", $tr["Scan order"], "</b></td>";
+                                echo "<td><b>", $tr["Expire count"], "</b></td>";
+                                echo "<td><b>", $tr["Flags"], "</b></td>";
+                            }
+                            if ($connected2master)
+                                echo "<td style='width:45px'><b>", $tr["Action"], "</b></td>";
+                            echo "</tr>";
 
-	while ($row = mysql_fetch_assoc ($q))
-	{
-		if ($local_params[$row["HID"]])
-		{
-			$row["Counter"] = $local_params[$row["HID"]]["Counter"];
-			$row["ExpireCount"] = $local_params[$row["HID"]]["ExpireCount"];
-			$row["Flags"] = $row["Flags"] & ~FLAGS_LOCAL | $local_params[$row["HID"]]["Flags"];
-		}
-		echo '<tr bgcolor="', $color_tb, '">', "\n";
-		if ($row["Flags"] & HOST_ONLINE)
-			echo '<td><img src="online.gif" alt="on" class="o" /></td>';
-		else
-			echo '<td><img src="offline.gif" alt="off" class="o" /></td>';
-		if (!$row["StartingDir"])
-			$row["StartingDir"] = '/';
-		echo '<td><a href="browse.php?lang=', $lang, $aid, '&amp;HID=', $row["HID"], '&amp;sort=FileName&amp;order=ASC" target="_blank">', htmlspecialchars ($row["HostName"]), '</a>'/*'<br />'*/,'' /*htmlspecialchars ($row["StartingDir"])*/;
-		if ($rights & RIGHT_FTP_EDIT)
-			echo '<br />', htmlspecialchars ($row["EditableBy"]);
-		echo '</td><td align="right">', $row["Port"], '</td>';
-		if ($c["SHOW_LOGIN_PASS"])
-			echo '<td>', htmlspecialchars ($row["Login"]), '<br />', htmlspecialchars ($row["PassWord"]), '<br /></td>';
-		if ($c["HOST_FILE_SIZE"])
-		{
-			if ($local_params[$row["HID"]])
-				$row["TotalFileSize"] = $local_params[$row["HID"]]["TotalFileSize"];
-			echo '<td align="right" nowrap="nowrap">', to_human_readable ($row["TotalFileSize"]), '</td>';
-		}
-		if ($c["SHOW_LAST_CHANGE"])
-		{
-			if ($local_params[$row["HID"]])
-				$row["LastScan"] = $local_params[$row["HID"]]["LastScan"];
-			echo '<td>', htmlspecialchars ($row["LastScan"]), '</td>';
-		}
-		echo '<td>', ereg_replace ("\n", "<br />", htmlspecialchars ($row["Comment"])), '</td>';
-		if ($rights & RIGHT_FTP_EDIT)
-		{
-			echo '<td align="right">', $row["Period"], '</td>';
-			echo '<td align="right">', $row["Counter"], '</td>';
-			echo '<td align="right">', $row["ScanOrder"], '</td>';
-			echo '<td align="right">', $row["ExpireCount"], '</td><td>';
-			if ($row["Flags"] & FLAGS_SHOW)
-			{
-				if ($row["Flags"] & HOST_DELETE)
-					echo $tr["delete"], "<br />";
-				if ($row["Flags"] & HOST_PURGE)
-					echo $tr["purge"], "<br />";
-			}
-			else
-				echo '&nbsp</td>';
-		}
-		if ($connected2master)
-		{
-			echo '<td>';
-			if (($rights & RIGHT_FTP_EDIT)
-					|| ($c["HOST_EDITABLE_SELF"] && ($row["HostName"] == $client || $row["HostName"] == $REMOTE_ADDR || $row["IP"] == $REMOTE_ADDR))
-					|| ($c["HOST_EDITABLE_OTHER"] && ($row["EditableBy"] == $client || $row["EditableBy"] == $REMOTE_ADDR)))
-			{
-				echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '&amp;scan=1">', $tr["Scan"], '</a><br />';
-				echo '<a href="ftp_host.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '">', $tr["Edit"], '</a><br />';
-				echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '">', $tr["Delete"], '</a><br />';
-				if ($rights & RIGHT_FTP_PURGE)
-					echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '&amp;purge=1', '">', $tr["Purge"], '</a><br />';
-			}
-			elseif ($rights & RIGHT_FTP_PURGE)
-			{
-				echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '">', $tr["Delete"], '</a><br />';
-				echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '&amp;purge=1', '">', $tr["Purge"], '</a><br />';
-			}
-			else
-				echo '&nbsp;';
-			echo "</td>";
-		}
-		echo "</tr>\n";
-	}
-	mysql_free_result ($q);
-?>
-	</table>
-</td></tr>
-</table>
-</td></tr>
-<tr><td bgcolor="<?php echo $color_wt; ?>">
-<table width="100%" border="0" cellpadding="3" cellspacing="0">
-<tr><td>
-<?php
-	echo_links ("ftp_list.php", "&amp;sort_by=$sort_by");
-?>
-</td></tr>
-</table>
-</td></tr>
+                            while ($row = mysql_fetch_assoc ($q))
+                            {
+                                if ($local_params[$row["HID"]])
+                                {
+                                    $row["Counter"] = $local_params[$row["HID"]]["Counter"];
+                                    $row["ExpireCount"] = $local_params[$row["HID"]]["ExpireCount"];
+                                    $row["Flags"] = $row["Flags"] & ~FLAGS_LOCAL | $local_params[$row["HID"]]["Flags"];
+                                }
+                                echo '<tr bgcolor="', $color_tb, '">', "\n";
+                                if ($row["Flags"] & HOST_ONLINE)
+                                    echo '<td><img src="online.gif" alt="on" class="o" /></td>';
+                                else
+                                    echo '<td><img src="offline.gif" alt="off" class="o" /></td>';
+                                if (!$row["StartingDir"])
+                                    $row["StartingDir"] = '/';
+                                echo '<td><a href="browse.php?lang=', $lang, $aid, '&amp;HID=', $row["HID"], '&amp;sort=FileName&amp;order=ASC" target="_blank">', htmlspecialchars ($row["HostName"]), '</a>'/*'<br />'*/,'' /*htmlspecialchars ($row["StartingDir"])*/;
+                                if ($rights & RIGHT_FTP_EDIT)
+                                    echo '<br />', htmlspecialchars ($row["EditableBy"]);
+                                echo '</td><td align="right">', $row["Port"], '</td>';
+                                if ($c["SHOW_LOGIN_PASS"])
+                                    echo '<td>', htmlspecialchars ($row["Login"]), '<br />', htmlspecialchars ($row["PassWord"]), '<br /></td>';
+                                if ($c["HOST_FILE_SIZE"])
+                                {
+                                    if ($local_params[$row["HID"]])
+                                        $row["TotalFileSize"] = $local_params[$row["HID"]]["TotalFileSize"];
+                                    echo '<td align="right" nowrap="nowrap">', to_human_readable ($row["TotalFileSize"]), '</td>';
+                                }
+                                if ($c["SHOW_LAST_CHANGE"])
+                                {
+                                    if ($local_params[$row["HID"]])
+                                        $row["LastScan"] = $local_params[$row["HID"]]["LastScan"];
+                                    echo '<td>', htmlspecialchars ($row["LastScan"]), '</td>';
+                                }
+                                echo '<td>', ereg_replace ("\n", "<br />", htmlspecialchars ($row["Comment"])), '</td>';
+                                if ($rights & RIGHT_FTP_EDIT)
+                                {
+                                    echo '<td align="right">', $row["Period"], '</td>';
+                                    echo '<td align="right">', $row["Counter"], '</td>';
+                                    echo '<td align="right">', $row["ScanOrder"], '</td>';
+                                    echo '<td align="right">', $row["ExpireCount"], '</td><td>';
+                                    if ($row["Flags"] & FLAGS_SHOW)
+                                    {
+                                        if ($row["Flags"] & HOST_DELETE)
+                                            echo $tr["delete"], "<br />";
+                                        if ($row["Flags"] & HOST_PURGE)
+                                            echo $tr["purge"], "<br />";
+                                    }
+                                    else
+                                        echo '&nbsp</td>';
+                                }
+                                if ($connected2master)
+                                {
+                                    echo '<td>';
+                                    if (($rights & RIGHT_FTP_EDIT)
+                                        || ($c["HOST_EDITABLE_SELF"] && ($row["HostName"] == $client || $row["HostName"] == $REMOTE_ADDR || $row["IP"] == $REMOTE_ADDR))
+                                        || ($c["HOST_EDITABLE_OTHER"] && ($row["EditableBy"] == $client || $row["EditableBy"] == $REMOTE_ADDR)))
+                                    {
+                                        echo '<a href="ftp_list.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '&amp;scan=1">', $tr["Scan"], '</a><br />';
+                                        echo '<a href="ftp_host.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '">', $tr["Edit"], '</a><br />';
+                                        echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '">', $tr["Delete"], '</a><br />';
+                                        if ($rights & RIGHT_FTP_PURGE)
+                                            echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '&amp;purge=1', '">', $tr["Purge"], '</a><br />';
+                                    }
+                                    elseif ($rights & RIGHT_FTP_PURGE)
+                                    {
+                                        echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '">', $tr["Delete"], '</a><br />';
+                                        echo '<a href="ftp_del.php?lang=', $lang, $aid, "&amp;position=$position&amp;sort_by=$sort_by&amp;HID=", $row["HID"], '&amp;purge=1', '">', $tr["Purge"], '</a><br />';
+                                    }
+                                    else
+                                        echo '&nbsp;';
+                                    echo "</td>";
+                                }
+                                echo "</tr>\n";
+                            }
+                            mysql_free_result ($q);
+                            ?>
+                    </table>
+                </td></tr>
+        </table>
+    </div>
+    <div class="container">
+        <table width="100%" border="0" cellpadding="3" cellspacing="0">
+            <tr><td>
+                    <?php
+                    echo_links ("ftp_list.php", "&amp;sort_by=$sort_by");
+                    ?>
+                </td></tr>
+        </table>
+    </div>
 <?php
 }
 

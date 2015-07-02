@@ -16,6 +16,7 @@ echo '<?xml version="1.0" encoding="', $encoding, '" ?>', "\n";
     <link rel="StyleSheet" type="text/css" href="styles.css"/>
     <link rel="StyleSheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.css" />
     <link rel="StyleSheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap-theme.min.css" />
+    <link rel="StyleSheet" type="text/css" href="Content/Styles/main.css" />
 
     <!--[if lt IE 9]>
     <script src="bootstrap-3.3.4-dist/js/html5shiv.js"></script>

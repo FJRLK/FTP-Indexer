@@ -68,95 +68,96 @@ if ($connected2master)
 {
     ?>
     <div style="clear:both;height:20px"></div>
-    <div class="jumbotron">
-        <div class="container">
-            <input type="hidden" name="position" value="0" />
-            <div class="form-group">
-                <div class="col-lg-8">
-                    Comment text
-                    <textarea name="comment" rows="7" cols="50" class="form-control"></textarea>
-                </div>
-                <div class="col-lg-4">
-                    Your name or nickname (optional):<br />
-                    <input type="text" name="name" size="50" class="form-control"/><br />
-                    Your e-mail (optional):<br />
-                    <input type="text" name="email" size="50" class="form-control"/><br />
-                    <input type="submit" name="submit" value="Submit" class="btn btn-primary"/>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <input type="hidden" name="position" value="0" />
+                <div class="form-group">
+                    <div class="col-lg-8">
+                        Comment text
+                        <textarea name="comment" rows="7" cols="50" class="form-control"></textarea>
+                    </div>
+                    <div class="col-lg-4">
+                        Your name or nickname (optional):<br />
+                        <input type="text" name="name" size="50" class="form-control"/><br />
+                        Your e-mail (optional):<br />
+                        <input type="text" name="email" size="50" class="form-control"/><br />
+                        <input type="submit" name="submit" value="Submit" class="btn btn-primary"/>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 <?php
 }
 
 if ($connected2master && $n)
 {
     ?>
-
-    <table class="table-bordered table table-responsive">
-        <thead>
-        <tr>
-            <th>
-                <h4>Comments</h4>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <?php
-                echo_links ("comments.php", "");
-                ?>
-            </td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>
-                <table width="100%" border="0" cellpadding="0" cellspacing="3">
+    <div class="container">
+        <table class="table-bordered table table-responsive">
+            <thead>
+            <tr>
+                <th>
+                    <h4>Comments</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
                     <?php
-                    $q = mysql_query ("SELECT * FROM comments ORDER BY Time DESC LIMIT $position,$per_page", $mdb);
-                    for ($i = 0; $row = mysql_fetch_assoc ($q); $i++)
-                    {
-                        ?>
-                        <tr><td>
-                                <table width="100%" border="0" cellpadding="3" cellspacing="0">
-                                    <tr bgcolor="<?php echo $color_tt; ?>">
-                                        <td>
-                                            <?php
-                                            echo htmlspecialchars ($row["Name"]);
-                                            if ($row["Email"])
-                                                echo " - ", htmlspecialchars (mangle_email($row['Email']));
-                                            else
-                                                echo '&nbsp;';
-                                            ?>
-                                        </td>
-                                        <td align="right">
-                                            <?php
-                                            echo strftime ("%Y-%m-%d %H:%M:%S", $row["Time"]);
-                                            if ($rights & RIGHT_COMMENTS)
-                                                echo '&nbsp;&nbsp;&nbsp;<a href="comment_del.php?lang=', $lang, $aid, '&amp;CID=', $row["CID"], '&amp;position=', $position, '">', $tr["Delete"], '</a>';
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <tr bgcolor="<?php echo $color_tb; ?>">
-                                        <td colspan="2"><?php echo ereg_replace ("\n", "<br />", htmlspecialchars ($row["Comment"])); ?></td>
-                                    </tr>
-                                </table>
-                            </td></tr>
-                    <?php
-                    }
-                    mysql_free_result ($q);
+                    echo_links ("comments.php", "");
                     ?>
-                </table>
-            </td></tr>
-        <tr><td bgcolor="<?php echo $color_wb; ?>">
-                <?php
-                echo_links ("comments.php", "");
-                ?>
-            </td></tr>
-        </tbody>
-    </table>
-
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="3">
+                        <?php
+                        $q = mysql_query ("SELECT * FROM comments ORDER BY Time DESC LIMIT $position,$per_page", $mdb);
+                        for ($i = 0; $row = mysql_fetch_assoc ($q); $i++)
+                        {
+                            ?>
+                            <tr><td>
+                                    <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                                        <tr bgcolor="<?php echo $color_tt; ?>">
+                                            <td>
+                                                <?php
+                                                echo htmlspecialchars ($row["Name"]);
+                                                if ($row["Email"])
+                                                    echo " - ", htmlspecialchars (mangle_email($row['Email']));
+                                                else
+                                                    echo '&nbsp;';
+                                                ?>
+                                            </td>
+                                            <td align="right">
+                                                <?php
+                                                echo strftime ("%Y-%m-%d %H:%M:%S", $row["Time"]);
+                                                if ($rights & RIGHT_COMMENTS)
+                                                    echo '&nbsp;&nbsp;&nbsp;<a href="comment_del.php?lang=', $lang, $aid, '&amp;CID=', $row["CID"], '&amp;position=', $position, '">', $tr["Delete"], '</a>';
+                                                ?>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor="<?php echo $color_tb; ?>">
+                                            <td colspan="2"><?php echo ereg_replace ("\n", "<br />", htmlspecialchars ($row["Comment"])); ?></td>
+                                        </tr>
+                                    </table>
+                                </td></tr>
+                        <?php
+                        }
+                        mysql_free_result ($q);
+                        ?>
+                    </table>
+                </td></tr>
+            <tr><td bgcolor="<?php echo $color_wb; ?>">
+                    <?php
+                    echo_links ("comments.php", "");
+                    ?>
+                </td></tr>
+            </tbody>
+        </table>
+    </div>
 <?php
 }
 require_once ("foot.php");

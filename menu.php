@@ -18,11 +18,6 @@ $item = array (
 		"script" => "ftp_list.php",
 		"hidden" => $c["FTP_DISABLE"]),
 	array (
-		"name" => "smb_list",
-		"text" => $tr["SMB server list"],
-		"script" => "smb_list.php",
-		"hidden" => $c["SMB_DISABLE"]),
-	array (
 		"name" => "comments",
 		"text" => $tr["Comments"],
 		"script" => "comments.php",
